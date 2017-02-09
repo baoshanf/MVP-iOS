@@ -20,8 +20,6 @@
  */
 - (void)onSuccess:(id)responseObject;
 
-
-
 /**
  响应失败
 

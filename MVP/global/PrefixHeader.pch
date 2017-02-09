@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  MVP
+//
+//  Created by baoshan on 17/2/9.
+//  Copyright © 2017年 hans. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "YYModel.h"
+
+#endif /* PrefixHeader_pch */

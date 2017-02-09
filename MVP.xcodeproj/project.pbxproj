@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		037613241E4C179D00ACFBC5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		039CCE1A1E4AAC58007D0111 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039CCE1E1E4AAC58007D0111 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		039CCE201E4AAC58007D0111 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		037613231E4C177500ACFBC5 /* global */ = {
+			isa = PBXGroup;
+			children = (
+				037613241E4C179D00ACFBC5 /* PrefixHeader.pch */,
+			);
+			path = global;
+			sourceTree = "<group>";
+		};
 		039CCE111E4AAC58007D0111 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +140,7 @@
 		039CCE1C1E4AAC58007D0111 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				037613231E4C177500ACFBC5 /* global */,
 				039CCE631E4AC3FB007D0111 /* home */,
 				039CCE5C1E4ABDAF007D0111 /* presenter */,
 				039CCE501E4AACAC007D0111 /* db */,
@@ -545,6 +555,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MVP/global/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -590,6 +602,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MVP/global/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

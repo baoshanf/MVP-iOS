@@ -17,10 +17,15 @@
 #pragma mark - HttpResponseHandle
 
 - (void)onSuccess:(id)responseObject{
-    
+    HomeModel *model = [HomeModel yy_modelWithJSON:responseObject];
+    if ([_view respondsToSelector:@selector(onGetMovieListSuccess:)]) {
+        [_view onGetMovieListSuccess:model];
+    }
 }
 
 - (void)onFail:(id)clientInfo errCode:(NSInteger)errCode errInfo:(NSString *)errInfo{
-    
+    if ([_view respondsToSelector: @selector(onGetMovieListFail: des:)]) {
+        [_view onGetMovieListFail:errCode des:errInfo];
+    }
 }
 @end

@@ -13,4 +13,5 @@
 - (void)onGetMovieListSuccess:(HomeModel *)homeModel;
 
 - (void)onGetMovieListFail:(NSInteger) errorCode des:(NSString *)des;
+
 @end

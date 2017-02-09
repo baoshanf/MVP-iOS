@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface HomeModel : NSObject
-//"count":20,
-//"start":0,
-//"total":1037,
-//"books":Array[20]
+
 @property (nonatomic,assign)NSInteger count;
 @property (nonatomic,assign)NSInteger start;
 @property (nonatomic,assign)NSInteger total;
