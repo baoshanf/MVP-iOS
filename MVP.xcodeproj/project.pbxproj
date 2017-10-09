@@ -22,6 +22,9 @@
 		039CCE691E4AC488007D0111 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE681E4AC488007D0111 /* HomeController.m */; };
 		039CCE6C1E4AC509007D0111 /* HomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE6B1E4AC509007D0111 /* HomePresenter.m */; };
 		039CCE701E4AF059007D0111 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE6F1E4AF059007D0111 /* HomeModel.m */; };
+		3A8077501F8B70B700ED0046 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A80774F1F8B70B700ED0046 /* DataBaseManager.m */; };
+		3A8077581F8B726F00ED0046 /* HomeBannerDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8077571F8B726F00ED0046 /* HomeBannerDao.m */; };
+		3A80775B1F8B75A500ED0046 /* HomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A80775A1F8B75A500ED0046 /* HomeBannerModel.m */; };
 		5C7A462B3E95263830EB8061 /* libPods-MVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F539A69AE2FD7A8FD6A777B /* libPods-MVP.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,14 @@
 		039CCE6E1E4AF059007D0111 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		039CCE6F1E4AF059007D0111 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		039CCE711E4AF30A007D0111 /* HomeViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewProtocol.h; sourceTree = "<group>"; };
+		3A80774E1F8B70B700ED0046 /* DataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataBaseManager.h; path = ../../../../../niannian/Documents/IOS_NNLetterWorkspace/Pods/GTExtensionSDK/DataBaseManager.h; sourceTree = "<group>"; };
+		3A80774F1F8B70B700ED0046 /* DataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DataBaseManager.m; path = ../../../../../niannian/Documents/IOS_NNLetterWorkspace/Pods/GTExtensionSDK/DataBaseManager.m; sourceTree = "<group>"; };
+		3A8077521F8B710F00ED0046 /* FMDatabase+Mapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+Mapping.h"; sourceTree = "<group>"; };
+		3A8077531F8B710F00ED0046 /* FMDatabase+Mapping.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+Mapping.m"; sourceTree = "<group>"; };
+		3A8077561F8B726F00ED0046 /* HomeBannerDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBannerDao.h; sourceTree = "<group>"; };
+		3A8077571F8B726F00ED0046 /* HomeBannerDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBannerDao.m; sourceTree = "<group>"; };
+		3A8077591F8B75A500ED0046 /* HomeBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBannerModel.h; sourceTree = "<group>"; };
+		3A80775A1F8B75A500ED0046 /* HomeBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBannerModel.m; sourceTree = "<group>"; };
 		8F539A69AE2FD7A8FD6A777B /* libPods-MVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E195E9C8D10365BA52F86D65 /* Pods-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.debug.xcconfig"; sourceTree = "<group>"; };
 		E1D5230EEF369658C2FD5AA1 /* Pods-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,10 +151,11 @@
 		039CCE1C1E4AAC58007D0111 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				3A8077511F8B70E900ED0046 /* 3rd */,
+				3A80774D1F8B70A500ED0046 /* db */,
 				037613231E4C177500ACFBC5 /* global */,
 				039CCE631E4AC3FB007D0111 /* home */,
 				039CCE5C1E4ABDAF007D0111 /* presenter */,
-				039CCE501E4AACAC007D0111 /* db */,
 				039CCE511E4AACAC007D0111 /* net */,
 				039CCE201E4AAC58007D0111 /* AppDelegate.h */,
 				039CCE211E4AAC58007D0111 /* AppDelegate.m */,
@@ -184,13 +196,6 @@
 			path = MVPUITests;
 			sourceTree = "<group>";
 		};
-		039CCE501E4AACAC007D0111 /* db */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = db;
-			sourceTree = "<group>";
-		};
 		039CCE511E4AACAC007D0111 /* net */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,10 +222,11 @@
 		039CCE631E4AC3FB007D0111 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				3A8077551F8B724E00ED0046 /* view */,
+				3A8077541F8B723500ED0046 /* dao */,
 				039CCE6D1E4AEF74007D0111 /* model */,
 				039CCE641E4AC435007D0111 /* controller */,
 				039CCE651E4AC435007D0111 /* presenter */,
-				039CCE661E4AC435007D0111 /* view */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -244,18 +250,13 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
-		039CCE661E4AC435007D0111 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		039CCE6D1E4AEF74007D0111 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				039CCE6E1E4AF059007D0111 /* HomeModel.h */,
 				039CCE6F1E4AF059007D0111 /* HomeModel.m */,
+				3A8077591F8B75A500ED0046 /* HomeBannerModel.h */,
+				3A80775A1F8B75A500ED0046 /* HomeBannerModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -267,6 +268,40 @@
 				E1D5230EEF369658C2FD5AA1 /* Pods-MVP.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3A80774D1F8B70A500ED0046 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				3A80774E1F8B70B700ED0046 /* DataBaseManager.h */,
+				3A80774F1F8B70B700ED0046 /* DataBaseManager.m */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		3A8077511F8B70E900ED0046 /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				3A8077521F8B710F00ED0046 /* FMDatabase+Mapping.h */,
+				3A8077531F8B710F00ED0046 /* FMDatabase+Mapping.m */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		3A8077541F8B723500ED0046 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				3A8077561F8B726F00ED0046 /* HomeBannerDao.h */,
+				3A8077571F8B726F00ED0046 /* HomeBannerDao.m */,
+			);
+			path = dao;
+			sourceTree = "<group>";
+		};
+		3A8077551F8B724E00ED0046 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		F1DB01E61E03D699B3A90A71 /* Frameworks */ = {
@@ -430,13 +465,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVP-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D4D07837F390F9A771AFAA1 /* [CP] Copy Pods Resources */ = {
@@ -464,11 +502,14 @@
 				039CCE701E4AF059007D0111 /* HomeModel.m in Sources */,
 				039CCE691E4AC488007D0111 /* HomeController.m in Sources */,
 				039CCE251E4AAC58007D0111 /* ViewController.m in Sources */,
+				3A80775B1F8B75A500ED0046 /* HomeBannerModel.m in Sources */,
 				039CCE221E4AAC58007D0111 /* AppDelegate.m in Sources */,
 				039CCE5F1E4ABDBF007D0111 /* Presenter.m in Sources */,
 				039CCE6C1E4AC509007D0111 /* HomePresenter.m in Sources */,
+				3A8077501F8B70B700ED0046 /* DataBaseManager.m in Sources */,
 				039CCE541E4AAE19007D0111 /* HttpClient.m in Sources */,
 				039CCE1F1E4AAC58007D0111 /* main.m in Sources */,
+				3A8077581F8B726F00ED0046 /* HomeBannerDao.m in Sources */,
 				039CCE5B1E4AB3C3007D0111 /* Reachability.m in Sources */,
 				039CCE621E4ABF36007D0111 /* HttpPresenter.m in Sources */,
 			);
