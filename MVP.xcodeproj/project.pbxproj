@@ -16,12 +16,16 @@
 		039CCE381E4AAC58007D0111 /* MVPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE371E4AAC58007D0111 /* MVPTests.m */; };
 		039CCE431E4AAC58007D0111 /* MVPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE421E4AAC58007D0111 /* MVPUITests.m */; };
 		039CCE541E4AAE19007D0111 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE531E4AAE19007D0111 /* HttpClient.m */; };
-		039CCE5B1E4AB3C3007D0111 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE5A1E4AB3C3007D0111 /* Reachability.m */; };
 		039CCE5F1E4ABDBF007D0111 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE5E1E4ABDBF007D0111 /* Presenter.m */; };
 		039CCE621E4ABF36007D0111 /* HttpPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE611E4ABF36007D0111 /* HttpPresenter.m */; };
 		039CCE691E4AC488007D0111 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE681E4AC488007D0111 /* HomeController.m */; };
 		039CCE6C1E4AC509007D0111 /* HomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE6B1E4AC509007D0111 /* HomePresenter.m */; };
 		039CCE701E4AF059007D0111 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 039CCE6F1E4AF059007D0111 /* HomeModel.m */; };
+		3A27585820EF1D4700FDFDE9 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A27585720EF1D4700FDFDE9 /* MineController.m */; };
+		3A27585B20EF1D9300FDFDE9 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A27585A20EF1D9300FDFDE9 /* MineModel.m */; };
+		3A27585E20EF1DC300FDFDE9 /* MinePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A27585D20EF1DC300FDFDE9 /* MinePresenter.m */; };
+		3A27586120EF1DD600FDFDE9 /* MineMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A27586020EF1DD600FDFDE9 /* MineMainView.m */; };
+		3A2CF1F120EE3567008A576C /* HomeMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2CF1F020EE3567008A576C /* HomeMainView.m */; };
 		3A2F27B31FD7D1370060903D /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F27B21FD7D1370060903D /* DataBaseManager.m */; };
 		3A8077581F8B726F00ED0046 /* HomeBannerDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8077571F8B726F00ED0046 /* HomeBannerDao.m */; };
 		3A80775B1F8B75A500ED0046 /* HomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A80775A1F8B75A500ED0046 /* HomeBannerModel.m */; };
@@ -66,8 +70,6 @@
 		039CCE521E4AAE19007D0111 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
 		039CCE531E4AAE19007D0111 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
 		039CCE581E4AB02E007D0111 /* HttpResponseHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponseHandle.h; sourceTree = "<group>"; };
-		039CCE591E4AB3C3007D0111 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		039CCE5A1E4AB3C3007D0111 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		039CCE5D1E4ABDBF007D0111 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
 		039CCE5E1E4ABDBF007D0111 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
 		039CCE601E4ABF36007D0111 /* HttpPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpPresenter.h; sourceTree = "<group>"; };
@@ -79,6 +81,17 @@
 		039CCE6E1E4AF059007D0111 /* HomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		039CCE6F1E4AF059007D0111 /* HomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		039CCE711E4AF30A007D0111 /* HomeViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewProtocol.h; sourceTree = "<group>"; };
+		3A27585620EF1D4700FDFDE9 /* MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
+		3A27585720EF1D4700FDFDE9 /* MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		3A27585920EF1D9300FDFDE9 /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
+		3A27585A20EF1D9300FDFDE9 /* MineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
+		3A27585C20EF1DC300FDFDE9 /* MinePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePresenter.h; sourceTree = "<group>"; };
+		3A27585D20EF1DC300FDFDE9 /* MinePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePresenter.m; sourceTree = "<group>"; };
+		3A27585F20EF1DD600FDFDE9 /* MineMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineMainView.h; sourceTree = "<group>"; };
+		3A27586020EF1DD600FDFDE9 /* MineMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineMainView.m; sourceTree = "<group>"; };
+		3A27586220EF1E4500FDFDE9 /* MineViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewProtocol.h; sourceTree = "<group>"; };
+		3A2CF1EF20EE3567008A576C /* HomeMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMainView.h; sourceTree = "<group>"; };
+		3A2CF1F020EE3567008A576C /* HomeMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMainView.m; sourceTree = "<group>"; };
 		3A2F27B11FD7D1370060903D /* DataBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
 		3A2F27B21FD7D1370060903D /* DataBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
 		3A8077521F8B710F00ED0046 /* FMDatabase+Mapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+Mapping.h"; sourceTree = "<group>"; };
@@ -155,6 +168,7 @@
 				3A8077511F8B70E900ED0046 /* 3rd */,
 				037613231E4C177500ACFBC5 /* global */,
 				039CCE631E4AC3FB007D0111 /* home */,
+				3A27585120EF1CF800FDFDE9 /* mine */,
 				039CCE5C1E4ABDAF007D0111 /* presenter */,
 				039CCE511E4AACAC007D0111 /* net */,
 				039CCE201E4AAC58007D0111 /* AppDelegate.h */,
@@ -199,8 +213,6 @@
 		039CCE511E4AACAC007D0111 /* net */ = {
 			isa = PBXGroup;
 			children = (
-				039CCE591E4AB3C3007D0111 /* Reachability.h */,
-				039CCE5A1E4AB3C3007D0111 /* Reachability.m */,
 				039CCE521E4AAE19007D0111 /* HttpClient.h */,
 				039CCE531E4AAE19007D0111 /* HttpClient.m */,
 				039CCE581E4AB02E007D0111 /* HttpResponseHandle.h */,
@@ -222,7 +234,7 @@
 		039CCE631E4AC3FB007D0111 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				3A2F27AE1FD7D08C0060903D /* view */,
+				3A2CF1EE20EE3557008A576C /* view */,
 				3A8077541F8B723500ED0046 /* dao */,
 				039CCE6D1E4AEF74007D0111 /* model */,
 				039CCE641E4AC435007D0111 /* controller */,
@@ -270,9 +282,59 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3A2F27AE1FD7D08C0060903D /* view */ = {
+		3A27585120EF1CF800FDFDE9 /* mine */ = {
 			isa = PBXGroup;
 			children = (
+				3A27585220EF1D3200FDFDE9 /* controller */,
+				3A27585320EF1D3200FDFDE9 /* model */,
+				3A27585420EF1D3200FDFDE9 /* presenter */,
+				3A27585520EF1D3200FDFDE9 /* view */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		3A27585220EF1D3200FDFDE9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A27585620EF1D4700FDFDE9 /* MineController.h */,
+				3A27585720EF1D4700FDFDE9 /* MineController.m */,
+				3A27586220EF1E4500FDFDE9 /* MineViewProtocol.h */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3A27585320EF1D3200FDFDE9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3A27585920EF1D9300FDFDE9 /* MineModel.h */,
+				3A27585A20EF1D9300FDFDE9 /* MineModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3A27585420EF1D3200FDFDE9 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A27585C20EF1DC300FDFDE9 /* MinePresenter.h */,
+				3A27585D20EF1DC300FDFDE9 /* MinePresenter.m */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		3A27585520EF1D3200FDFDE9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3A27585F20EF1DD600FDFDE9 /* MineMainView.h */,
+				3A27586020EF1DD600FDFDE9 /* MineMainView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3A2CF1EE20EE3557008A576C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3A2CF1EF20EE3567008A576C /* HomeMainView.h */,
+				3A2CF1F020EE3567008A576C /* HomeMainView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -331,8 +393,6 @@
 				039CCE161E4AAC58007D0111 /* Sources */,
 				039CCE171E4AAC58007D0111 /* Frameworks */,
 				039CCE181E4AAC58007D0111 /* Resources */,
-				288A11C87464BC3A34EFED54 /* [CP] Embed Pods Frameworks */,
-				9D4D07837F390F9A771AFAA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -452,21 +512,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		288A11C87464BC3A34EFED54 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVP/Pods-MVP-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		785847B198636DA1CBE379C6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,21 +530,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D4D07837F390F9A771AFAA1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVP/Pods-MVP-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -513,12 +543,16 @@
 				3A80775B1F8B75A500ED0046 /* HomeBannerModel.m in Sources */,
 				039CCE221E4AAC58007D0111 /* AppDelegate.m in Sources */,
 				039CCE5F1E4ABDBF007D0111 /* Presenter.m in Sources */,
+				3A27585820EF1D4700FDFDE9 /* MineController.m in Sources */,
 				039CCE6C1E4AC509007D0111 /* HomePresenter.m in Sources */,
 				3A2F27B31FD7D1370060903D /* DataBaseManager.m in Sources */,
+				3A2CF1F120EE3567008A576C /* HomeMainView.m in Sources */,
 				039CCE541E4AAE19007D0111 /* HttpClient.m in Sources */,
+				3A27585E20EF1DC300FDFDE9 /* MinePresenter.m in Sources */,
+				3A27586120EF1DD600FDFDE9 /* MineMainView.m in Sources */,
 				039CCE1F1E4AAC58007D0111 /* main.m in Sources */,
 				3A8077581F8B726F00ED0046 /* HomeBannerDao.m in Sources */,
-				039CCE5B1E4AB3C3007D0111 /* Reachability.m in Sources */,
+				3A27585B20EF1D9300FDFDE9 /* MineModel.m in Sources */,
 				039CCE621E4ABF36007D0111 /* HttpPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

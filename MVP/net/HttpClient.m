@@ -9,7 +9,7 @@
 #import "HttpClient.h"
 #import "AFNetworking.h"
 #import "HttpResponseHandle.h"
-#import "Reachability.h"
+#import "HKHttpManagerHeader.h"
 
 @interface HttpClient ()
 
@@ -18,15 +18,6 @@
  */
 @property (nonatomic,weak) id<HttpResponseHandle> responseHandle;
 
-/**
- 网络接通行
- */
-@property (nonatomic,strong) Reachability *netReachability;
-
-/**
- 网络请求对象
- */
-@property (nonatomic,strong) AFHTTPSessionManager *sessionManager;
 @end
 
 @implementation HttpClient
@@ -40,71 +31,52 @@
     if (self) {
         //指定delegate
         _responseHandle = responseHandle;
-        _netReachability = [Reachability reachabilityForInternetConnection];
+        
+        [HKHttpConfigure shareInstance].generalServer = @"https://www.apiopen.top/";
     }
     return self;
 }
 
-- (void)post:(NSString *)URLString parameters:(id)parameters
-
-{
-    
-    [self.sessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
-       
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        //返回响应
-        if([_responseHandle respondsToSelector:@selector(onSuccess:)]){
-            [_responseHandle onSuccess:responseObject];
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        if ([_responseHandle respondsToSelector:@selector(onFail:errCode:errInfo:)]) {
-            [_responseHandle onFail:parameters  errCode:error.code errInfo:error.description];
-        }
-
-    }];
-    
-    
-}
-
-- (void)get:(NSString *)URLString parameters:(id)parameters{
-    
-    //如果网络不可用，不发起网络请求，直接返回错误
-    if ([_netReachability currentReachabilityStatus] == NotReachable) {
-        if (_responseHandle) {
-            //这里的netcode根据服务器自己定义成枚举或者宏定义
-            [_responseHandle onFail:parameters errCode:0 errInfo:@"Network is not reachable"];
-        }
-        return ;
-    }
-    
-    
-    [self.sessionManager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //返回响应
-        if([_responseHandle respondsToSelector:@selector(onSuccess:)]){
-            [_responseHandle onSuccess:responseObject];
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        if ([_responseHandle respondsToSelector:@selector(onFail:errCode:errInfo:)]) {
-            [_responseHandle onFail:parameters  errCode:error.code errInfo:error.description];
+- (NSString *_Nullable)post:(NSString *)URLString parameters:(id)parameters{
+  NSString *requestId =  [[HKHttpManager shareManager] sendRequestWithConfigBlock:^(HKHttpRequest * _Nullable request) {
+        request.requestURL = URLString;
+        request.requestMethod = HKHttpRequestTypePost;
+        request.normalParams = parameters;
+    } complete:^(HKHttpResponse * _Nullable response) {
+        if (response.status == HKHttpResponseStatusSuccess) {
+            //返回响应
+            if([_responseHandle respondsToSelector:@selector(onSuccess:)]){
+                [_responseHandle onSuccess:response];
+            }
+        }else{
+            if ([_responseHandle respondsToSelector:@selector(onFail:errCode:errInfo:)]) {
+                [_responseHandle onFail:parameters  errCode:response.statueCode errInfo:response.content];
+            }
         }
     }];
+    return requestId;
+    
 }
-#pragma mark - lazy load
-- (AFHTTPSessionManager *)sessionManager{
 
-    if (!_sessionManager) {
-        _sessionManager = [AFHTTPSessionManager manager];
-        //设置请求格式，格式为字典 k-v
-        _sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
-        _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-        
-        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
-    }
-    return _sessionManager;
+- (NSString *_Nullable)get:(NSString *)URLString parameters:(id)parameters{
+  NSString *requestId = [[HKHttpManager shareManager]sendRequestWithConfigBlock:^(HKHttpRequest * _Nullable request) {
+        request.requestMethod = HKHttpRequestTypeGet;
+        request.requestURL = URLString;
+        request.normalParams = parameters;
+    } complete:^(HKHttpResponse * _Nullable response) {
+        if (response.status == HKHttpResponseStatusSuccess) {
+            //返回响应
+            if([_responseHandle respondsToSelector:@selector(onSuccess:)]){
+                [_responseHandle onSuccess:response];
+            }
+        }else{
+            if ([_responseHandle respondsToSelector:@selector(onFail:errCode:errInfo:)]) {
+                [_responseHandle onFail:parameters  errCode:response.statueCode errInfo:response.content];
+            }
+        }
+    }];
+    return requestId;
+    
 }
+
 @end

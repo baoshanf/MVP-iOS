@@ -1,0 +1,1 @@
+../../../HKHttpManager/HKHttpManager/Sources/request/HKRequestInterceptorProtocol.h

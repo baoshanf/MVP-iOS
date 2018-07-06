@@ -1,0 +1,1 @@
+../../../HKHttpManager/HKHttpManager/Sources/NSString+Base64.h

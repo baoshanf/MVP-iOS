@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HomeModel.h"
 
 @protocol HomeViewProtocol <NSObject>
-- (void)onGetMovieListSuccess:(HomeModel *)homeModel;
+- (void)onGetMovieListSuccess:(id)model;
 
 - (void)onGetMovieListFail:(NSInteger) errorCode des:(NSString *)des;
 

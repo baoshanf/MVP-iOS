@@ -7,20 +7,29 @@
 //
 
 #import "HomePresenter.h"
-#import "HomeModel.h"
 
+#import "HKHttpResponse.h"
 @implementation HomePresenter
 
-- (void)getMovieListWithUrlString:(NSString *)urlString{
-    [self.httpClient get:urlString parameters:nil];
+- (void)getMovieListWithUrlString:(NSString *)urlString param:(NSDictionary *)param{
+    [self.httpClient get:urlString parameters:param];
 }
 #pragma mark - HttpResponseHandle
 
-- (void)onSuccess:(id)responseObject{
-    HomeModel *model = [HomeModel yy_modelWithJSON:responseObject];
-    if ([_view respondsToSelector:@selector(onGetMovieListSuccess:)]) {
-        [_view onGetMovieListSuccess:model];
+- (void)onSuccess:(id )responseObject{
+    HKHttpResponse * responseObj = (HKHttpResponse *)responseObject;
+    if ([responseObj.request.URL.absoluteString hasSuffix:@"satinApi"]) {
+        HomeModel *model = [HomeModel yy_modelWithJSON:responseObj.content];
+        if ([_view respondsToSelector:@selector(onGetMovieListSuccess:)]) {
+            [_view onGetMovieListSuccess:model];
+        }
+    }else{
+        HomeBannerModel *model = [HomeBannerModel yy_modelWithJSON:responseObj.content];
+        if ([_view respondsToSelector:@selector(onGetMovieListSuccess:)]) {
+            [_view onGetMovieListSuccess:model];
+        }
     }
+   
 }
 
 - (void)onFail:(id)clientInfo errCode:(NSInteger)errCode errInfo:(NSString *)errInfo{

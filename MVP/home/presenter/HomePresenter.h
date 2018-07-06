@@ -9,7 +9,9 @@
 #import "HttpPresenter.h"
 #import "HomeViewProtocol.h"
 
+#import "HomeModel.h"
+#import "HomeBannerModel.h"
 @interface HomePresenter : HttpPresenter <id<HomeViewProtocol>>
 
-- (void)getMovieListWithUrlString:(NSString *)urlString;
+- (void)getMovieListWithUrlString:(NSString *)urlString param:(NSDictionary *)param;
 @end

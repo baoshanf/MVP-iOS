@@ -1,0 +1,1 @@
+../../../HKHttpManager/HKHttpManager/Sources/HKHttpConstant.h
