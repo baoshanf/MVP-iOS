@@ -1,4 +1,6 @@
 # MVP-iOS
+
+简书地址：https://www.jianshu.com/p/abea207c23e7
 前言
 随着移动互联网承载着越来越错综复杂的业务，传统的MVC已经不能完全满足我们的需求，于是就出现了MVVM、MVP、VIPER等架构。其中，最广为人知的是MVVM，虽说上手没那么容易，但是出于它能为controller减压的优越性，被广泛使用。因此，关于MVVM的文章比比皆是。
 
@@ -19,8 +21,6 @@ Presenter：作为model和view的中间人，从model层获取数据之后传给
 
 
 
-
-mvp
 下面我们结合代码来看：
 
 首先来看项目的文件结构：
